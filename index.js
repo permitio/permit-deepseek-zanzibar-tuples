@@ -7,13 +7,15 @@ const cors = require("cors");
 dotenv.config();
 
 const permit = new Permit({
+  // To check the ReBAC policy, you have to run the Permit PDP locally
+  // It is not a must to run it to see the demo
   pdp: "http://localhost:7766",
-  token: process.env.PERMIT_API_KEY_PROD,
+  token: process.env.PERMIT_API_KEY,
 });
 
 const openai = new OpenAI({
   baseURL: "https://api.studio.nebius.ai/v1/",
-  apiKey: process.env.MY_OWN_NEBIUS_API_KEY,
+  apiKey: process.env.NEBIUS_API_KEY,
 });
 
 const app = express();
