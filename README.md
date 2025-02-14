@@ -2,15 +2,26 @@
 
 Use the latest DeepSeek R1 model to generate relationship tuples from simple English sentences and sync them with Permit.
 
+## Prequesits
+To test the project, you need to open free accounts in Nebius and Permit.io
+
+1. [Nebius AI Studio](https://docs.nebius.com/studio/inference/quickstart) API key
+2. Permit [API token](https://app.permit.io/)
+
 ## How to run the code
 
-Clone the project using the `git clone` command
+1. Clone the project using the `git clone` command
 
-Open the project on your terminal and run:
+2. Set Nebius API key and Permit API key as environment variables in a `.env` file
+    ```
+    NEBIUS_API_KEY=<your_nebius_deepseek_inferecne_token>
+    PERMIT_API_KEY=<your_permit_api_key>
+    ```
 
-```sh
-nodemon index.js
-```
+3. Open the project on your terminal and run:
+   ```sh
+   nodemon index.js
+   ```
 
 ## Example
 
